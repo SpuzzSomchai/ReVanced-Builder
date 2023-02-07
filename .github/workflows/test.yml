@@ -22,8 +22,7 @@ jobs:
         run: ./download_apkmirror.sh
 
       - name: Test Build APKs
-        run: |
-          ./build_revanced.sh
+        run: | ./build_revanced.sh
           for filename in build/revanced-root.apk build/revanced-nonroot.apk build/revanced-music-root.apk build/revanced-music-nonroot.apk; do
             if [ -e "$filename" ]; then
               printf '"%s" exists\n' "$filename"
